@@ -5,6 +5,7 @@ namespace App\Http\Controllers\auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class registerController extends Controller
 {
@@ -42,13 +43,16 @@ class registerController extends Controller
         # increment id
         $id = DB::table('users')->max('id');
 
+        # Hash password
+        
+
         // store data to table user
         DB::table('users')->insert([
             'id' => $id + 1,
             'name' => $request->name,
             'npm' => $request->npm,
-            'password' => $request->password
-            
+            'password' => Hash::make($request->password)
+
         ]);
 
         return redirect('/loginPage');

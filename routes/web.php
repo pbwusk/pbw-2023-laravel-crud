@@ -36,4 +36,15 @@ Route::post('/login', [loginController::class, 'login']);
 Route::post('/register', [registerController::class, 'store']);
 
 
+// Jika session login tidak ada maka akan diarahkan ke halaman login page dan jika ada maka akan diarahkan ke halaman dashboard
+Route::get('/dashboard', [PagesController::class, 'dashboard'])->middleware('auth');
+
+
+
+
+
+
+
+
+
 

@@ -11,7 +11,6 @@
 
     <form action="/login" method="POST">
     @csrf
-
     <div class="min-h-screen flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">
             <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -27,7 +26,7 @@
                             NPM
                         </label>
                         <div class="mt-1">
-                            <input id="NPM" name="NPM" required
+                            <input id="npm" name="npm" required
                                 class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                                 placeholder="Silahkan masukkan NPM anda">
                         </div>

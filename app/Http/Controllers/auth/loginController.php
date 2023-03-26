@@ -4,6 +4,10 @@ namespace App\Http\Controllers\auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Auth;
 
 class loginController extends Controller
 {
@@ -18,12 +22,25 @@ class loginController extends Controller
     }
     
     public function login(Request $request){
-        $request->validate([
-            'id' => 'required',
+        $credential = $request->validate([
+            'npm' => 'required',
             'password' => 'required'
         ]);
-             
-    }
+
+
+        // $npm = $request->npm;
+        // $password = Hash::check($request, $request->password);
+
+        // if user is exist in database then we will redirect to dashboard page and activate middleware auth page
+
+        if(Auth::attempt($credential)){
+            return redirect()->intended('/dashboard');
+        }
+        
+        Alert::error('Error', 'NPM atau Password salah');
+        return back()->with('loginError', 'NPM atau Password salah');
+
+}
 
     /**
      * Show the form for creating a new resource.

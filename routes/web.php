@@ -48,14 +48,6 @@ Route::get('/logout', [loginController::class, 'destroy']);
 
 
 
-/**
- * 
- * Admin privilage
- */
-
-Route::get('/dashboardAdmin', [adminController::class, 'dashboardAdmin'])->middleware('auth');
-
-
 
 
 

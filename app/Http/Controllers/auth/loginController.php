@@ -27,10 +27,6 @@ class loginController extends Controller
             'password' => 'required'
         ]);
 
-
-        // $npm = $request->npm;
-        // $password = Hash::check($request, $request->password);
-
         // if user is exist in database then we will redirect to dashboard page and activate middleware auth page
 
         if(Auth::attempt($credential)){
@@ -85,8 +81,14 @@ class loginController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy()
     {
-        //
+        Auth::logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

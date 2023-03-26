@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -18,5 +18,21 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        DB::table('users')->insert([
+            'name' => 'Admin',
+            'npm' => '404',
+            'password' => bcrypt('admin'),
+            'role' => 'admin'
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'ABDUL HAFIDH',
+            'npm' => '2008107010056',
+            'password' => bcrypt('1234'),
+            'role' => 'user'
+        ]);
+
+        
     }
 }

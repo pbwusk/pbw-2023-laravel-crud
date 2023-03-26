@@ -6,7 +6,16 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    container:{
+      center: true,
+      padding: '64px',
+    },
+    extend: {
+      colors:{
+        primary : "#10b981" ,// Emerald colour
+        secondary: "#94a3b8" // text-slate-400
+      }
+    },
   },
   plugins: [],
 }

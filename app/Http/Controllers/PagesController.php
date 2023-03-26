@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function halamanUtama(){
-        return view('index');
+        return view('index', [
+            'title' => 'siakad'
+        ]);
     }
 
     public function dashboard(){

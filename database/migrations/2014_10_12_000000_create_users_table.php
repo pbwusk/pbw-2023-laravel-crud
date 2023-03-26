@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('npm')->unique();
             $table->string('password');
+            $table->string('role')->default('user');
         });
     }
 

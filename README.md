@@ -4,10 +4,10 @@
 <p> Berikut ini adalah langkah-langkah dalam menjalankan aplikasi ini </p>
 
 <p> 1. Clone repository ini </p>
-<pre><code> git clone </pre></code>
+<pre><code> git clone https://github.com/pbwusk/pbw-2023-laravel-crud.git </pre></code>
 
 <p> 2. Masuk ke direktori aplikasi </p>
-<pre><code> cd laravel-crud </pre></code>
+<pre><code> cd pbw-2023-laravel-crud </pre></code>
 
 <p> 3. Install composer </p>
 <pre><code> composer install </pre></code>

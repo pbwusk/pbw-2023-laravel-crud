@@ -1,19 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> {{$title}} | SIAKAD  </title>
   @vite('resources/css/app.css')
-
-  <title>{{ $title }} | PBW-2023</title>
 </head>
 <body @yield('body')>
 
+
+  @include('partials.navbar')
+
+
+  <main class="min-h-screen">
+    @yield('content')
+  </main>
+
+
   @include('sweetalert::alert')
-
-  @yield('content')
-
   @vite('resources/js/app.js')
+
   
 </body>
 </html>

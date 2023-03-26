@@ -18,6 +18,7 @@ use App\Http\Controllers\admin\adminController;
 |
 */
 
+
 // Route ini akan mengarahkan ke halaman utama
 // url: yang akhiranya adalah / akan diarahkan ke halaman utama
 Route::get('/', [PagesController::class, 'halamanUtama']);

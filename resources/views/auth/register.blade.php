@@ -53,15 +53,4 @@
     </div>
 
 
-    <form action="/" method="POST">
-
-        <label for="kode_user">Kode Rumah Sakit</label><br>
-        <input type="text" name= "kode_user" id="kode_user" autofocus required><br>
-        <label for="password">Password</label><br>
-        <input type="password" name="password" id="password" required>
-
-        <button type="submit"> ke </button>
-
-
-    </form>
 @endsection

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class registerController extends Controller
 {
@@ -43,8 +44,12 @@ class registerController extends Controller
         # increment id
         $id = DB::table('users')->max('id');
 
-        # Hash password
-        
+
+        # Jika NPM sudah ada yang punya maka kita harus mencegahnya agar tidak bisa register
+        if(DB::table('users')->where('npm', $request->npm)->exists()){
+            Alert::error('Error', 'NPM udah ada yang punya oi');
+            return redirect('/registerPage');
+        }
 
         // store data to table user
         DB::table('users')->insert([
@@ -55,7 +60,10 @@ class registerController extends Controller
 
         ]);
 
+        
+
         return redirect('/loginPage');
+
     }
 
     /**

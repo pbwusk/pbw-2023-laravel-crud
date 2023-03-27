@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('day');
             $table->string('room');
             $table->string('lecturer');
+            $table->integer('sks');
             $table->timestamps();
         });
     }

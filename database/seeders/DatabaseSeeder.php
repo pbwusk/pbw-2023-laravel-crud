@@ -42,7 +42,8 @@ class DatabaseSeeder extends Seeder
             'subject_name' => 'Machine Learning',
             'day' => 'Jumat',
             'room' => 'E.03:03',
-            'lecturer' => 'Pak Alim Misbullah'
+            'lecturer' => 'Pak Alim Misbullah',
+            'sks' => '3'
         ]);
 
         DB::table('subjects')->insert([
@@ -50,7 +51,8 @@ class DatabaseSeeder extends Seeder
             'subject_name' => 'Teks Web Mining',
             'day' => 'Selasa',
             'room' => 'E.03:03',
-            'lecturer' => 'Prof Taufik Fuadi Abidin'
+            'lecturer' => 'Prof Taufik Fuadi Abidin',
+            'sks' => '3'
         ]);
 
 

@@ -26,12 +26,33 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin'
         ]);
 
+        // Ngisi data dump ke tabel Users
         DB::table('users')->insert([
             'name' => 'ABDUL HAFIDH',
             'npm' => '2008107010056',
             'password' => bcrypt('1234'),
             'role' => 'user'
         ]);
+
+
+        // Ngisi data dump ke tabel Subjects (Mata Kuliah)
+
+        DB::table('subjects')->insert([
+            'users_id' => '2',
+            'subject_name' => 'Machine Learning',
+            'day' => 'Jumat',
+            'room' => 'E.03:03',
+            'lecturer' => 'Pak Alim Misbullah'
+        ]);
+
+        DB::table('subjects')->insert([
+            'users_id' => '2',
+            'subject_name' => 'Teks Web Mining',
+            'day' => 'Selasa',
+            'room' => 'E.03:03',
+            'lecturer' => 'Prof Taufik Fuadi Abidin'
+        ]);
+
 
         
     }

@@ -32,5 +32,8 @@
 <p> 10. jalankan composer library </p>
 <pre><code> composer require realrashid/sweet-alert  </pre></code>
 
-<p> 11. Jalankan aplikasi </p>
+<p> 11. Jalankan npm dev agar kompilasi css dapat dilakukan </p>
+<pre><code> sudo npm run dev  </pre></code>
+
+<p> 12. Jalankan aplikasi </p>
 <pre><code> php artisan serve </pre></code>
